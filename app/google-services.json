@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "985924560798",
+    "firebase_url": "https://home-delivery-c599a.firebaseio.com",
+    "project_id": "home-delivery-c599a",
+    "storage_bucket": "home-delivery-c599a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985924560798:android:fb619b46998cccbf75d88f",
+        "android_client_info": {
+          "package_name": "com.exp.homedelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985924560798-v8br765cv10b6sa83qssske0u7a08tp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.exp.homedelivery",
+            "certificate_hash": "fea781e3ec77ba1332043047716fe51b0bd41967"
+          }
+        },
+        {
+          "client_id": "985924560798-8o0epk6rgb2vi3dtis2nqa94psogs739.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsJOAyjfB9XNQ12V5Xeg22b477-faCXhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985924560798-8o0epk6rgb2vi3dtis2nqa94psogs739.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
