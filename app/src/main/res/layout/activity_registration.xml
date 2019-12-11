@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#BEBEBE"
+    android:gravity="center"
     tools:context=".Activities.User.Registration">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/mainpic" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/backgroundtext"
+        android:textColor="#555"
+        android:textColorHint="#555"
+        android:drawableLeft="@drawable/smartphone"
+        android:drawablePadding="10dp"
+        android:hint="Mobile Number" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userAlternateMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/backgroundtext"
+        android:textColor="#555"
+        android:textColorHint="#555"
+        android:drawableLeft="@drawable/smartphone"
+        android:drawablePadding="10dp"
+        android:hint="Alternate Mobile Number" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/backgroundtext"
+        android:textColor="#555"
+        android:textColorHint="#555"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="10dp"
+        android:hint="Email Id" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:background="@drawable/backgroundtext"
+        android:textColor="#555"
+        android:textColorHint="#555"
+        android:drawableLeft="@drawable/key"
+        android:drawablePadding="10dp"
+        android:hint="Password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="10dp"
+    />
+</LinearLayout>
