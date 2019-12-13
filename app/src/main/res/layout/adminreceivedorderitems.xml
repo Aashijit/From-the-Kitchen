@@ -90,23 +90,23 @@
                 android:id="@+id/adminTotalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="10"
+                android:layout_weight="92"
                 android:text="Rs 1230.00 /-"
                 android:textColor="#670"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
-
-<!--            <TextView-->
-<!--                android:id="@+id/itemPriceDescription"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_weight="90"-->
-<!--                android:paddingLeft="5dp"-->
-<!--                android:text="( Each plate includes 5 pieces of Mutton without any bones.)"-->
-<!--                android:textColor="#F14A4A"-->
-<!--                android:textSize="8dp"-->
-<!--                android:textStyle="italic" />-->
+            <TextView
+                android:id="@+id/adminUserPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="right"
+                android:drawableLeft="@drawable/telephone"
+                android:text="+91 8910473248"
+                android:textColor="#536DFE"
+                android:textSize="12dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <View
