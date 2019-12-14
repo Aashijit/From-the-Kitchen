@@ -2,6 +2,7 @@
     <string name="app_name">Home Delivery</string>
 
     <string name="Rs">\u20B9</string>
+    <string name="pay_order"><![CDATA[PAY & Order]]></string>
 
 
     <string-array name="quantity">
