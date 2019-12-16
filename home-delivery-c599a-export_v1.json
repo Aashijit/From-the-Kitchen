@@ -1,0 +1,200 @@
+{
+  "AccountInfo" : {
+    "account_001" : {
+      "_AccountId" : "1",
+      "_Email" : "mm@mm.com",
+      "_HashedPassword" : "abcdef",
+      "_MobileNumber" : "1234567890",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Admin",
+      "_Name":"Ritika Maity",
+      "_PhotoUrl":""
+    },
+    "account_002" : {
+      "_AccountId" : "2",
+      "_Email" : "hh@hh.com",
+      "_HashedPassword" : "abcdef",
+      "_MobileNumber" : "1234567891",
+      "_Salt" : "1234",
+      "_RegistrationMode":"User",
+      "_Name":"Ritika Maity",
+      "_PhotoUrl":""
+    },
+    "account_003" : {
+      "_AccountId" : "3",
+      "_Email" : "jj@jj.com",
+      "_HashedPassword" : "abcdef",
+      "_MobileNumber" : "1234567892",
+      "_Salt" : "1234",
+      "_RegistrationMode":"User",
+      "_Name":"Sanchari Chatterjee",
+      "_PhotoUrl":""
+    },
+    "account_004" : {
+      "_AccountId" : "4",
+      "_Email" : "kk@kk.com",
+      "_HashedPassword" : "abcdef",
+      "_MobileNumber" : "1234567893",
+      "_Salt" : "1234",
+      "_RegistrationMode":"User",
+      "_Name":"Bihari Bhai",
+      "_PhotoUrl":""
+    },
+    "account_005" : {
+      "_AccountId" : "5",
+      "_Email" : "qq@qq.com",
+      "_HashedPassword" : "abcdef",
+      "_MobileNumber" : "1234567894",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_006" : {
+      "_AccountId" : "6",
+      "_Email" : "ab@kk.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567895",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_007" : {
+      "_AccountId" : "7",
+      "_Email" : "ho@kk.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567896",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_008" : {
+      "_AccountId" : "8",
+      "_Email" : "ll@ll.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567897",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_009" : {
+      "_AccountId" : "9",
+      "_Email" : "aa@aa.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567898",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_010" : {
+      "_AccountId" : "10",
+      "_Email" : "cc@cc.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567899",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_011" : {
+      "_AccountId" : "11",
+      "_Email" : "dd@dd.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "12345678910",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_012" : {
+      "_AccountId" : "12",
+      "_Email" : "ee@ee.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1234567811",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    },
+    "account_013" : {
+      "_AccountId" : "13",
+      "_Email" : "ke@kk.com",
+      "_HashedPassword" : "abcd",
+      "_MobileNumber" : "1212567893",
+      "_Salt" : "1234",
+      "_RegistrationMode":"Kitchen",
+      "_Name":"",
+      "_PhotoUrl":""
+    }
+  },
+  "KitchenInfo" : {
+    "kitchen_001" : {
+      "_KitchenId":"1",
+      "_Name" : "Mrs Sharma's Kitchen",
+      "_Description":"They specialise in North Indian food, they have a very different taste in cooking Rice and Dal.",
+      "_FoodDescription":"Mouth watering Dal Makhani is the speciality of this kitchen, people nearby love her for this.",
+      "_Price":"250",
+      "_PriceDescription":"Generally for two people having an appetite",
+      "_PhotoUrl" : "",
+      "_Address":"123,Sarat Chatterjee Road, Kolkata - 700 089",
+      "_CookingTime":"30-40 minutes",
+      "_DeliveryTime":"45-50 minutes",
+      "_DeliveryRadius":"20 Km",
+      "items":[
+        {
+          "_Name":"Butter Chapati",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/butter_chapati.jpg",
+          "_Description":"Proper butterly feel on every chapati, made with care and love for the best homely feel.It takes 15 minutes to make this chapati.",
+          "_Price":"15",
+          "_PriceDescription":"Per Pc."
+        },
+        {
+          "_Name":"Keema Pav",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/keema_pav.jpg",
+          "_Description":"Served with Ledmon edges, onions fried and freshly baked keema on butterly pav",
+          "_Price":"120",
+          "_PriceDescription":"2 Pcs."
+        },
+        {
+          "_Name":"Egg Curry & Rice",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/egg_rice.jpg",
+          "_Description":"Proper dehradun rice will be given along with fried egg curry squandered with chilli garlic and lemon cheese.",
+          "_Price":"350",
+          "_PriceDescription":"Per Plate"
+        },
+        {
+          "_Name":"Rajma Chawal",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/rajma_chawal.jpg",
+          "_Description":"Rajma curry is added to dehradun rice. It is steamed rice. Baked Rajma and spicy curry.",
+          "_Price":"250",
+          "_PriceDescription":"Per Plate"
+        },
+        {
+          "_Name":"Jhaal Moori",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/jhaal_moori.jpg",
+          "_Description":"Curated with perfection, baked rice, along with spices, olive oil (fat free) and tasty peanuts. Churned into a delicious mixture.",
+          "_Price":"99",
+          "_PriceDescription":"Per Packet containing 250 gm. baked rice"
+        },
+        {
+          "_Name":"Chicken Wings",
+          "_PhotoUrl":"gs://home-delivery-c599a.appspot.com/chicken_wings.jpg",
+          "_Description":"Chicken are cut into small slits, where each slit is given spices, hot chillies to bring out its mouth watering awe.",
+          "_Price":"300",
+          "_PriceDescription":"Per Plate with 4 drumsticks"
+        },
+        {
+          "_Name":"Chicken Strips",
+          "_PhotoUrl":"",
+          "_Description":"Chicken is cut into slits and each slit is dedicated to proper chilly bath, to be the most tasty item for dinner of atleast 5 people. ",
+          "_Price":"1500",
+          "_PriceDescription":"Per Plate containing 15 chicken slits"
+        }
+      ]
+    }
+  }
+}

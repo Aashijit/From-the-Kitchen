@@ -67,7 +67,16 @@
         android:id="@+id/homeDeliveryMenuList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="99"
+        android:layout_weight="98"
         android:padding="10dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_weight="1"
+        android:text="Checkout"
+        android:onClick="goToCheckOut"
+        />
 
 </LinearLayout>
