@@ -12,6 +12,7 @@ public class OrderInfo {
     private String _OrderTimestamp;
     private String _UserMobileSNumber;
     private String _KitchenMobileNumber;
+    private String _Status;
     private List<MenuItems> items;
 
     public String get_KitchenName() {
@@ -86,6 +87,14 @@ public class OrderInfo {
         this.items = items;
     }
 
+    public String get_Status() {
+        return _Status;
+    }
+
+    public void set_Status(String _Status) {
+        this._Status = _Status;
+    }
+
     @Override
     public String toString() {
         return "OrderInfo{" +
@@ -97,6 +106,7 @@ public class OrderInfo {
                 ", _OrderTimestamp='" + _OrderTimestamp + '\'' +
                 ", _UserMobileSNumber='" + _UserMobileSNumber + '\'' +
                 ", _KitchenMobileNumber='" + _KitchenMobileNumber + '\'' +
+                ", _Status='" + _Status + '\'' +
                 ", items=" + items +
                 '}';
     }

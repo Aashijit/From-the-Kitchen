@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.exp.homedelivery.Activities.Admin.AdminLogin;
 import com.exp.homedelivery.Activities.Admin.AdminReceivedOrders;
 import com.exp.homedelivery.Activities.User.Login;
 import com.exp.homedelivery.Activities.User.MyOrder;
@@ -67,7 +68,7 @@ public class SplashScreen extends AppCompatActivity {
         }
         else{
             //Lead the user to the Login Screen
-            Intent intent = new Intent(SplashScreen.this, Login.class);
+            Intent intent = new Intent(SplashScreen.this, AdminLogin.class);
             startActivity(intent);
             finish();
         }

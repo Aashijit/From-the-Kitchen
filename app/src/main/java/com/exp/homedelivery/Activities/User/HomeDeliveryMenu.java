@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -94,7 +95,9 @@ public class HomeDeliveryMenu extends AppCompatActivity {
                         continue;
                     }
 
-                    if(kitchenInfo.get_EmailId().equalsIgnoreCase(KitchenEmailId)){
+                    Log.d(this.getClass().getName(),"Email Id : "+kitchenInfo);
+
+                    if(kitchenInfo.get_Email().equalsIgnoreCase(KitchenEmailId)){
                            menuListAdapter = new MenuListAdapter(HomeDeliveryMenu.this,kitchenInfo.getItems());
                            homeDeliveryMenuList.setAdapter(menuListAdapter);
                            break;
@@ -143,7 +146,8 @@ public class HomeDeliveryMenu extends AppCompatActivity {
                         //Populate the order info
                         OrderInfo orderInfo = new OrderInfo();
                         orderInfo.set_KitchenAddress(kitchenInfo.get_Address());
-                        orderInfo.set_KitchenEmailId(kitchenInfo.get_EmailId());
+                        orderInfo.set_KitchenEmailId(kitchenInfo.get_Email());
+                        orderInfo.set_Status("New");
                         orderInfo.set_KitchenMobileNumber("");
                         orderInfo.set_KitchenName(kitchenInfo.get_Name());
                         orderInfo.set_UserEmailId(firebaseAuth.getCurrentUser().getEmail());

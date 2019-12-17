@@ -59,29 +59,29 @@ public class MenuListAdapter extends ArrayAdapter<MenuItems> {
 
         itemName.setText(menuItemsList.get(position).get_Name());
         itemDescription.setText(menuItemsList.get(position).get_Description());
-        itemPrice.setText(menuItemsList.get(position).get_Price());
+        itemPrice.setText(context.getResources().getText(R.string.Rs).toString()+menuItemsList.get(position).get_Price());
         itemPriceDescription.setText(menuItemsList.get(position).get_PriceDescription());
         itemCheckBox.setChecked(menuItemsList.get(position).isSelected());
 
-        StorageReference storageReference = storage.getReferenceFromUrl(menuItemsList.get(position).get_PhotoUrl());
-
-        try {
-            final File localFile = File.createTempFile("images", "jpg");
-            storageReference.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                    Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
-                    itemPicture.setImageBitmap(bitmap);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception exception) {
-                    Toast.makeText(context,exception.getLocalizedMessage(),Toast.LENGTH_LONG).show();
-                }
-            });
-        } catch (IOException e ) {
-            Toast.makeText(context,e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
-        }
+//        StorageReference storageReference = storage.getReferenceFromUrl(menuItemsList.get(position).get_PhotoUrl());
+//
+//        try {
+//            final File localFile = File.createTempFile("images", "jpg");
+//            storageReference.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+//                @Override
+//                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+//                    Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+//                    itemPicture.setImageBitmap(bitmap);
+//                }
+//            }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception exception) {
+//                    Toast.makeText(context,exception.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+//                }
+//            });
+//        } catch (IOException e ) {
+//            Toast.makeText(context,e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+//        }
 
         itemCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

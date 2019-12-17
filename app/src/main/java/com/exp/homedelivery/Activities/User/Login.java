@@ -57,13 +57,13 @@ public class Login extends AppCompatActivity {
                 final AccountInfo accountInfo = AuthenticationUtils.getValidUser(dataSnapshot, editTextMobileNumber.getText().toString(), editTextPassword.getText().toString());
 
                 if (accountInfo == null) {
-                    Toast.makeText(getApplicationContext(), "Invalid Phone Number or Password", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Invalid Phone No. or Password", Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 //Login in with email id and password
 
-                firebaseAuth.signInWithEmailAndPassword(editTextMobileNumber.getText().toString(), editTextPassword.getText().toString()).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(accountInfo.get_Email(), editTextPassword.getText().toString()).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
