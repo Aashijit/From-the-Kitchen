@@ -71,7 +71,22 @@ public class MyOrder extends AppCompatActivity {
         //Fetch the available kitchens
         fetchAccountInfoUser();
         fetchAvailableKitchens();
+        fetchOrders();
+    }
 
+    private void fetchOrders() {
+
+        databaseReferenceOrders.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void fetchAccountInfoUser() {
