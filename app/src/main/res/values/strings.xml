@@ -2,5 +2,15 @@
     <string name="app_name">Home Delivery</string>
 
     <string name="Rs">\u20B9</string>
+    <string name="pay_order"><![CDATA[PAY & Order]]></string>
+
+
+    <string-array name="quantity">
+        <item id="1">Only 1 plate</item>
+        <item id="2">Yum! 2 plates</item>
+        <item id="3">Yuhuu! 3 plates</item>
+        <item id="4">Ahaa! 4 plates</item>
+        <item id="5">Bravo! 5 plates</item>
+    </string-array>
 
 </resources>

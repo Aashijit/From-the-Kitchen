@@ -8,7 +8,7 @@
     tools:context=".Activities.User.Login">
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/adminMobileNumber"
+        android:id="@+id/anyUserMobileNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/adminPassword"
+        android:id="@+id/anyUserPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminMobileNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/anyUserMobileNumber" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -65,7 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/adminPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/anyUserPassword"
+        android:onClick="loginAnyUser"/>
 
     <ImageView
         android:layout_width="250dp"

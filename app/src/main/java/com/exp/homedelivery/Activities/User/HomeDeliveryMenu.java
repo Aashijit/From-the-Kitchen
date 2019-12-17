@@ -15,7 +15,7 @@ public class HomeDeliveryMenu extends AppCompatActivity {
         setContentView(R.layout.activity_home_delivery_menu);
     }
 
-    public void goBack(View view){
-        finish();
+    public void goToCheckOut(View view) {
+
     }
 }
