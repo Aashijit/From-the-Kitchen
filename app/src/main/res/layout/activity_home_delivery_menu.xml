@@ -8,6 +8,7 @@
     android:weightSum="100"
     tools:context=".Activities.User.HomeDeliveryMenu">
 
+
     <!-- Header starts here -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,8 +76,8 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_weight="1"
-        android:drawableRight="@drawable/next"
-        android:text="Go To Checkout"
+        android:text="Order Food"
         android:onClick="goToCheckOut"
+        android:drawableRight="@drawable/cart"
         />
 </LinearLayout>

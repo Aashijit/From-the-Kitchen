@@ -14,9 +14,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.exp.homedelivery.Activities.SplashScreen;
 import com.exp.homedelivery.Activities.User.ListAdapters.KitchenInfoListAdapter;
+import com.exp.homedelivery.Activities.User.ListAdapters.OrderListAdapter;
 import com.exp.homedelivery.DataObjects.AccountInfo;
 import com.exp.homedelivery.DataObjects.KitchenInfo;
+import com.exp.homedelivery.DataObjects.OrderInfo;
 import com.exp.homedelivery.R;
 import com.exp.homedelivery.Utils.Codes;
 import com.google.firebase.auth.FirebaseAuth;
@@ -38,6 +41,7 @@ public class MyOrder extends AppCompatActivity {
     DatabaseReference databaseReferenceOrders = database.getReference("OrderInfo");
 
     private KitchenInfoListAdapter kitchenInfoListAdapter;
+    private OrderListAdapter orderListAdapter;
 
     private TextView userNameMyOrders;
     private ListView userAvailableKitchens;
@@ -71,7 +75,49 @@ public class MyOrder extends AppCompatActivity {
         //Fetch the available kitchens
         fetchAccountInfoUser();
         fetchAvailableKitchens();
+        fetchOrders();
+    }
 
+    private void fetchOrders() {
+
+        databaseReferenceOrders.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                List<OrderInfo> orderInfos = new ArrayList<>();
+                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
+
+                    OrderInfo orderInfo = dataSnapshot1.getValue(OrderInfo.class);
+
+                    if(orderInfo == null){
+                        Toast.makeText(getApplicationContext(), "Order info is null", Toast.LENGTH_SHORT).show();
+                        continue;
+                    }
+
+                    if(orderInfo.get_UserEmailId().equalsIgnoreCase(firebaseAuth.getCurrentUser().getEmail())) {
+                        Log.d(this.getClass().getName(),orderInfo.toString());
+                        orderInfos.add(orderInfo);
+                    }
+                }
+
+                if(orderInfos.size() > 0){
+                    noOrderImage.setVisibility(View.GONE);
+                    noOrderText.setVisibility(View.GONE);
+                    noOrderTextDescription.setVisibility(View.GONE);
+
+                    //Paint the list view
+                    orderListAdapter = new OrderListAdapter(MyOrder.this,orderInfos);
+                    userOrders.setAdapter(orderListAdapter);
+                    userOrders.setVisibility(View.VISIBLE);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void fetchAccountInfoUser() {
@@ -133,7 +179,7 @@ public class MyOrder extends AppCompatActivity {
                         intent.putExtra(Codes.KEY_KITCHEN_NAME,kitchenInfoList.get(position).get_Name());
                         intent.putExtra(Codes.KEY_KITCHEN_DESCRIPTION,kitchenInfoList.get(position).get_Description());
                         intent.putExtra(Codes.KEY_KITCHEN_SMALL_DESCRIPTION,kitchenInfoList.get(position).get_CookingTime());
-                        intent.putExtra(Codes.KEY_KITCHEN_EMAIL_ID,kitchenInfoList.get(position).get_EmailId());
+                        intent.putExtra(Codes.KEY_KITCHEN_EMAIL_ID,kitchenInfoList.get(position).get_Email());
                         startActivity(intent);
                     }
                 });
@@ -145,5 +191,12 @@ public class MyOrder extends AppCompatActivity {
                 return;
             }
         });
+    }
+
+    public void logOutUser(View view) {
+        firebaseAuth.signOut();
+        Intent intent = new Intent(MyOrder.this, SplashScreen.class);
+        startActivity(intent);
+        finish();
     }
 }

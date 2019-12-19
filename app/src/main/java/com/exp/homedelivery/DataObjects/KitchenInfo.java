@@ -15,7 +15,7 @@ public class KitchenInfo {
     private String _PhotoUrl;
     private String _Price;
     private String _PriceDescription;
-    private String _EmailId;
+    private String _Email;
     private List<MenuItems> items;
 
     public String get_Address() {
@@ -106,12 +106,12 @@ public class KitchenInfo {
         this._PriceDescription = _PriceDescription;
     }
 
-    public String get_EmailId() {
-        return _EmailId;
+    public String get_Email() {
+        return _Email;
     }
 
-    public void set_EmailId(String _EmailId) {
-        this._EmailId = _EmailId;
+    public void set_Email(String _Email) {
+        this._Email = _Email;
     }
 
     public List<MenuItems> getItems() {
@@ -136,7 +136,7 @@ public class KitchenInfo {
                 ", _PhotoUrl='" + _PhotoUrl + '\'' +
                 ", _Price='" + _Price + '\'' +
                 ", _PriceDescription='" + _PriceDescription + '\'' +
-                ", _EmailId='" + _EmailId + '\'' +
+                ", _Email='" + _Email + '\'' +
                 ", items=" + items +
                 '}';
     }

@@ -56,7 +56,7 @@ public class KitchenInfoListAdapter extends ArrayAdapter<KitchenInfo> {
 
         deliveryTeamName.setText(kitchenInfoList.get(position).get_Name());
         deliveryTeamBestMenu.setText(kitchenInfoList.get(position).get_Description());
-        deliveryTeamMinimumPrice.setText(kitchenInfoList.get(position).get_Price());
+        deliveryTeamMinimumPrice.setText(context.getResources().getText(R.string.Rs).toString() + kitchenInfoList.get(position).get_Price());
         deliveryTeamPriceDescription.setText(kitchenInfoList.get(position).get_PriceDescription());
 
         StorageReference storageReference = storage.getReferenceFromUrl(kitchenInfoList.get(position).get_PhotoUrl());
