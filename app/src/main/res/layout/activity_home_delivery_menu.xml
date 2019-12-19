@@ -75,8 +75,8 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_weight="1"
-        android:text="Checkout"
+        android:drawableRight="@drawable/next"
+        android:text="Go To Checkout"
         android:onClick="goToCheckOut"
         />
-
 </LinearLayout>
